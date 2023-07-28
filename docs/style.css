@@ -5,8 +5,12 @@ body {
     font-family: "Montserrat", sans-serif;
     color: #56c4e6;
     font-size: 16px;
-    max-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
  }
+
  ul {
     list-style: none;
  }
@@ -35,7 +39,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 600px;
+    min-height: 33rem;
+    flex: 1;
  }
 .content {
     margin: 1rem;
@@ -60,6 +65,8 @@ h4{
     gap: 1rem;
     flex-wrap: wrap;
     margin-top: 5rem;
+    min-height: auto; 
+    padding-inline-start: 0px;
 }
 @media screen and (max-width:420px) {
     .skills ul{
@@ -74,7 +81,7 @@ h4{
     background-color: #56c4e6;
     padding: 0.2em;
     border-radius: 50%;
-    overflow: hidden
+    overflow: hidden;
 }
 .logos img {
     width: 100%;
@@ -83,6 +90,8 @@ h4{
 
 footer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    text-align: center;
     font-size: 0.8rem;
+    flex: 1;
 }
