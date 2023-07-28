@@ -87,7 +87,20 @@ h4{
     width: 100%;
     height: 100%;
 }
+/* -----ABOUT ME-------*/
+.row {
+    display: flex;
+}
 
+
+
+
+
+
+
+
+
+/*----Footer----*/
 footer {
     display: flex;
     justify-content: center;

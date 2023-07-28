@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <title> Personal Website </title>
@@ -22,23 +22,54 @@
     <hr>
     <main> 
         <section class="main">
-        <h4 class="content"> Hi, My name is </h4>
-        <h1 class="content">Pedro Yana. </h1>
-        <h3 class="content"> I specialize in building webpages. </h3>
-        <h4 class="content">
-            I work as a software engineer with a primary focus on building and enhancing websites to deliver exceptional user experiences. <br>
-            As I progress in my career, I am actively expanding my skill set to eventually become a full stack engineer, capable of handling both front-end and back-end development tasks
-        </h4>
-        </section>
-        <section class="skills">
-            <ul>
-            <li class="logos"> <img src="./resources/css.png" alt="css logo"> </li>
-            <li class="logos"> <img src="./resources/git.png" alt="git logo"> </li>
-            <li class="logos"> <img src="./resources/javascript.png" alt="javascript logo"> </li>
-            <li class="logos"> <img src="./resources/html5.png" alt="html5 logo"> </li>
-            </ul>
+        <h3 class="content"> Hey, I'm </h3>
+        <h1 class="content"> Pettyr. </h1>
+        <h4 class="content"> I specialize in building webpages. </h4>
         </section>
     </main>
+    <hr>
+
+    <!-------ABOUT ME-------->
+
+        <section class="about-me">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="./resources/Portrait-1.jpg" alt="Portrait of Myself">
+                    </div>
+                    <div class="about-col-2">
+                        <h2> About Me</h2>
+                    <p>
+                    I work as a software engineer with a primary focus on building and enhancing websites to deliver exceptional user experiences. <br><br>
+                    As I progress in my career, I am actively expanding my skill set to eventually become a full stack engineer, capable of handling both front-end and back-end development tasks
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Programming Languages</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><img src="./resources/html5.png" alt="HTML5"><span>HTML5</span><br>Building and assigning webpage elements</li>
+                            <li><img src="./resources/css.png" alt="CSS"><span>CSS</span><br>Designing Web to enhance user Interface and experience </li>
+                            <li><img src="./resources/javascript.png" alt="Javascript"><span>Javascript</span><br>Making websites Interactive</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Marine Engineer</span><br>Responsible for keeping the ship's main and auxillary machineries in safe and efficient conditions<br> -7 years-</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Full Stack Engineer Career path </span><br>Codecademy<br>2023</li>
+                            <li><span>Bachelors Degree in Mar-Engineering</span><br>University of Cebu<br>2012-2016</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <br>
     <br>
     <footer>
@@ -46,5 +77,23 @@
         <br>
          All rights reserved.
     </footer>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
 </body>
 </html>
