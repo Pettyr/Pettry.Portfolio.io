@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/bf77ba38fe.js" crossorigin="anonymous"></script>
     <title> Personal Website </title>
 </head>
 <body>
     <header>
        <nav>
         <ul>
-            <li><a href="./aboutme.html">About Me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#"> Skills </a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
         </nav>
     </header>
@@ -31,7 +31,7 @@
 
     <!-------ABOUT ME-------->
 
-        <section class="about-me">
+        <section class="about-me" id="about">
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
@@ -70,30 +70,100 @@
                 </div>
             </div>
         </section>
-    <br>
-    <br>
+        <hr>
+
+        <!----------Projects-------------->
+        <section id="Projects">
+            <div class="container">
+                <h2 class="Subtitle"> Sample Projects </h2>
+                <div class="worklist">
+                    <div class="work">
+                        <img src="./resources/project-1.jpg" alt="Piano Player">
+                        <div class="layer">
+                            <h3>Piano Player</h3>
+                            <p> This website teaches piano at intermediate level. </p>
+                            <div class="logos">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <div class="visit">
+                                <a href="#"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./resources/Project-2.jpg" alt="Number Guesser">
+                        <div class="layer">
+                            <h3>Number Guesser</h3>
+                            <p> This website lets you play with a random number. </p>
+                            <div class="logos">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <div class="visit">
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./resources/Project-3.jpg" alt="Story Form">
+                        <div class="layer">
+                            <h3>Story Form</h3>
+                            <p> This website forms a story based on user inputs</p>
+                            <div class="logos">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                            </div>
+                            <div class="visit">
+                                <a href="#"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <!-------- CONTACT --------->
+        <section id="Contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h2 class="Subtitle"> Contact me</h2>
+                        <p> <i class="fa-solid fa-square-envelope"></i> pedz.yana@gmail.com</p>
+                        <p> <i class="fa-brands fa-square-whatsapp"></i> +63 9052415171</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-square-github"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <div>
+                            <a href="./resources/CV-Software-Engineer.pdf" download class="btn" >DOWNLOAD CV</a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="name" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" id="message" cols="30" rows="10"></textarea>
+                            <br>
+                            <button type="submit" class="btn btn2">Send</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
     <footer>
         © 2023 Pettyr.github.io
         <br>
          All rights reserved.
     </footer>
 
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-
-    </script>
+    <script src="./main.js"></script>
 </body>
 </html>
