@@ -5,46 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bf77ba38fe.js" crossorigin="anonymous"></script>
     <title> Personal Website </title>
 </head>
 <body>
     <header>
        <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
+        <ul id="nav">
+            <li><a href="#Main">Main</a></li>
+            <li><a href="#About">About Me</a></li>
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
         </nav>
     </header>
-    <hr>
-    <main> 
+    <main id="Main"> 
         <section class="main">
         <h3 class="content"> Hey, I'm </h3>
         <h1 class="content"> Pettyr. </h1>
         <h4 class="content"> I specialize in building webpages. </h4>
         </section>
     </main>
-    <hr>
 
     <!-------ABOUT ME-------->
 
-        <section class="about-me" id="about">
+        <section class="about-me" id="About">
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src="./resources/Portrait-1.jpg" alt="Portrait of Myself">
+                        <img src="./resources/About-me.jpg" alt="Portrait of Myself">
                     </div>
                     <div class="about-col-2">
                         <h2> About Me</h2>
                     <p>
-                    I work as a software engineer with a primary focus on building and enhancing websites to deliver exceptional user experiences. <br><br>
+                    I am a software engineer currently based in Cebu, with a primary focus on building and enhancing websites to deliver exceptional user experiences. <br><br>
                     As I progress in my career, I am actively expanding my skill set to eventually become a full stack engineer, capable of handling both front-end and back-end development tasks
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills')">Programming Languages</p>
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Languages</p>
                         <p class="tab-links" onclick="opentab('Experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
@@ -70,11 +71,11 @@
                 </div>
             </div>
         </section>
-        <hr>
+
 
         <!----------Projects-------------->
         <section id="Projects">
-            <div class="container">
+            <div class="grid-container">
                 <h2 class="Subtitle"> Sample Projects </h2>
                 <div class="worklist">
                     <div class="work">
@@ -125,7 +126,7 @@
                 </div>
             </div>
         </section>
-        <hr>
+
 
         <!-------- CONTACT --------->
         <section id="Contact">
@@ -149,7 +150,7 @@
                         <form name="submit-to-google-sheet">
                             <input type="name" name="Name" placeholder="Your Name" required>
                             <input type="email" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message" id="message" cols="30" rows="10"></textarea>
+                            <textarea name="Message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                             <br>
                             <button type="submit" class="btn btn2">Send</button>
                         </form>

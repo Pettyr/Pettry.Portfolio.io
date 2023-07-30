@@ -6,7 +6,7 @@ body {
     background-image: url("./resources/Background-1.png");
     background-size:cover;
     background-repeat: no-repeat;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
     font-size: 16px;
     display: flex;
@@ -17,11 +17,16 @@ body {
  ul {
     list-style: none;
  }
- nav ul {
+ #nav{
     display: flex;
-    gap: 5rem;
+    gap: 1.5rem;
     justify-content: flex-end;
-    margin-right: 2rem;
+ }
+
+
+ nav {
+    position: fixed;
+    right: 5%;
 }
 @media screen and (max-width: 420px) {
     nav ul {
@@ -40,22 +45,15 @@ a {
  .main {
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
-    justify-content: flex-start;
+    margin-top: 15rem;
     min-height: 100vh;
     flex: 1;
-    margin-left: 5rem;
- }
- @media screen and (max-width: 600px){
-    .main {
-        margin-left: 0;
-        margin-top: 12rem;
-    }
+    margin-left: 15%;
  }
 
  h1 {
     font-size: 3rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
  }
 
  h3{
@@ -65,7 +63,8 @@ a {
  }
 
 h4{
-    font-size: .8rem;
+    font-size: 1rem;
+    margin: 0;
 }
 
 /*-----ABOUT ME-----*/
@@ -73,7 +72,7 @@ h4{
     min-height: 100vh;
 }
 .container{
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 .row {
     display: flex;
@@ -81,30 +80,44 @@ h4{
     flex-wrap: wrap;
 }
 .about-col-1 {
-    flex-basis: 30%;
+    flex-basis: 40%;
 }
 .about-col-1 img{
-    width: 70%;
+    width: 90%;
     border-radius: 15px;
 }
 .about-col-2{
     flex-basis: 60%;
 }
+@media screen and (max-width:600px) {
+    .row{
+        display: block;
+    }
+    .about-col-2{
+        margin-top: 1rem;
+    }
+
+}
+
 h2{
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 600;
-    margin-top: 0;
+    margin: 0;
 }
 .about-col-2 p{
+    font-size: 0.8rem;
     max-width: 40rem;
 }
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 1rem 0 0.5rem;
+}
+.tab-titles p{
+    font-size: 1rem;
 }
 .tab-links {
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -122,14 +135,18 @@ h2{
 .tab-links.active-link::after{
     width: 80%;
 }
+.tab-contents ul{
+    padding-inline-start: 0px;
+}
 .tab-contents ul li{
     list-style: none;
-    margin: 10px 0;
+    margin: 1rem 0;
     max-width: 40rem;
+    font-size: 0.8rem;
 }
 .tab-contents ul li span{
     color:#56c4e6;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .tab-contents ul li img{
     max-width: 1.5rem;
