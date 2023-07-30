@@ -28,3 +28,12 @@ function opentab(tabname){
     })
       .catch(error => console.error('Error!', error.message))
   })
+
+  var sidemenu = document.getElementById("nav");
+  function openmenu(){
+    sidemenu.style.left = "0"
+  } 
+  function closemenu(){
+    sidemenu.style.left = "-150px"
+  }
+
