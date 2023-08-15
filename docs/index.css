@@ -92,6 +92,13 @@ a {
     font-size: 3rem;
     margin: 0.5rem 0;
  }
+ h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+ }
 
  h3{
     font-size: 1.5rem;
@@ -103,6 +110,7 @@ h4{
     font-size: 1rem;
     margin: 0;
 }
+
 
 /*-----ABOUT ME-----*/
 #about {
@@ -120,27 +128,29 @@ h4{
     flex-basis: 40%;
 }
 .about-col-1 img{
-    width: 90%;
+    max-width: 70%;
     border-radius: 15px;
+    margin: 8% 15%;
 }
 .about-col-2{
+    display: flex;
+    flex-direction: column;
     flex-basis: 60%;
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:800px) {
     .row{
         display: block;
     }
     .about-col-2{
         margin-top: 1rem;
+
+    }
+    h2 {
+        justify-content: center;
     }
 
 }
 
-h2{
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 0;
-}
 .about-col-2 p{
     font-size: 0.8rem;
     max-width: 40rem;
@@ -204,7 +214,9 @@ h2{
     padding: 3rem 0 0;
     min-height: 100vh;
 }
-
+#SampleProj {
+    justify-content: center;
+}
 .worklist{
     display: grid;
     max-width: 70%;
